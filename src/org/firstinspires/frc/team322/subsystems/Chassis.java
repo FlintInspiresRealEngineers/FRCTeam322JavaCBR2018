@@ -71,7 +71,7 @@ public class Chassis extends Subsystem {
     // here. Call these from Commands.
 
     public void driveWithJoystick(XboxController driveStick) {
-    	robotDrive.arcadeDrive(driveStick.getY(Hand.kLeft), driveStick.getX(Hand.kRight), true);
+    	robotDrive.arcadeDrive(-(driveStick.getY(Hand.kLeft)), driveStick.getX(Hand.kRight), true);
     }
 
     public void brakesOn() {
