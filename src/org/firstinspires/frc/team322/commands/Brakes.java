@@ -51,8 +51,7 @@ public class Brakes extends Command {
     // Make this return true when this Command no longer needs to run execute()
     @Override
     protected boolean isFinished() {
-    	if(Robot.oi.getdriveStick().getBButtonReleased()) {
-    		Robot.chassis.brakesOff();
+    	if(Robot.oi.getDriveStick().getBButtonReleased()) {
     		return true;	
     	}
     	else
@@ -61,7 +60,8 @@ public class Brakes extends Command {
 
     // Called once after isFinished returns true
     @Override
-    protected void end() {    	
+    protected void end() {
+    	Robot.chassis.brakesOff();
     }
 
     // Called when another command which requires one or more of the same

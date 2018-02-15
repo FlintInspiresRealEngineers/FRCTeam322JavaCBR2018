@@ -61,10 +61,7 @@ public class Chassis extends Subsystem {
     @Override
     public void periodic() {
         // Put code here to be run every loop
-    	leftFrontDriveMotor.setNeutralMode(NeutralMode.Coast);
-        leftRearDriveMotor.setNeutralMode(NeutralMode.Coast);
-        rightFrontDriveMotor.setNeutralMode(NeutralMode.Coast);
-        rightRearDriveMotor.setNeutralMode(NeutralMode.Coast);
+
     }
 
     // Put methods for controlling this subsystem
