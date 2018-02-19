@@ -10,6 +10,7 @@
 
 
 package org.firstinspires.frc.team322.commands;
+import edu.wpi.first.wpilibj.GenericHID.Hand;
 import edu.wpi.first.wpilibj.command.Command;
 import org.firstinspires.frc.team322.Robot;
 
@@ -49,8 +50,8 @@ public class RetractClimbArm extends Command {
     // Make this return true when this Command no longer needs to run execute()
     @Override
     protected boolean isFinished() {
-    	if(Robot.oi.getManipulatorStick().getYButtonReleased()) {
-    		return true;
+    	if(Robot.oi.getManipulatorStick().getBumperReleased(Hand.kRight)) {
+    		return true;	
     	}
     	else
     		return false;
