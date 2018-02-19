@@ -108,7 +108,7 @@ public class RobotMap {
         
         ledControlCANifier = new CANifier(1);
         
-        climbArmDoubleSolenoid1 = new DoubleSolenoid(1, 0, 1);
+        climbArmDoubleSolenoid1 = new DoubleSolenoid(0, 0, 1);
         LiveWindow.addActuator("ClimbArm", "Double Solenoid 1", climbArmDoubleSolenoid1);
         
         chassisSensorsIMU = new ADIS16448_IMU();
