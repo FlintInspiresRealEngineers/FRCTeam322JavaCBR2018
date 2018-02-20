@@ -66,7 +66,7 @@ public class RobotMap {
         
         
         chassisleftSideDriveMotors = new SpeedControllerGroup(chassisleftFrontDriveMotor, chassisleftRearDriveMotor  );
-        //LiveWindow.addActuator("Chassis", "leftSideDriveMotors", chassisleftSideDriveMotors);
+        LiveWindow.addActuator("Chassis", "leftSideDriveMotors", chassisleftSideDriveMotors);
         
         chassisrightFrontDriveMotor = new WPI_TalonSRX(3);
         
@@ -75,16 +75,16 @@ public class RobotMap {
         
         
         chassisrightSideDriveMotors = new SpeedControllerGroup(chassisrightFrontDriveMotor, chassisrightRearDriveMotor  );
-        //LiveWindow.addActuator("Chassis", "rightSideDriveMotors", chassisrightSideDriveMotors);
+        LiveWindow.addActuator("Chassis", "rightSideDriveMotors", chassisrightSideDriveMotors);
         
         chassisrobotDrive = new DifferentialDrive(chassisleftSideDriveMotors, chassisrightSideDriveMotors);
-        //LiveWindow.addActuator("Chassis", "robotDrive", chassisrobotDrive);
+        LiveWindow.addActuator("Chassis", "robotDrive", chassisrobotDrive);
         chassisrobotDrive.setSafetyEnabled(true);
         chassisrobotDrive.setExpiration(0.1);
         chassisrobotDrive.setMaxOutput(1.0);
 
         chassisSensorspowerDistributionPanel = new PowerDistributionPanel(0);
-        //LiveWindow.addSensor("ChassisSensors", "powerDistributionPanel", chassisSensorspowerDistributionPanel);
+        LiveWindow.addSensor("ChassisSensors", "powerDistributionPanel", chassisSensorspowerDistributionPanel);
         
         lowerArmleftLowerArmMotor = new WPI_TalonSRX(5);
         
@@ -92,7 +92,7 @@ public class RobotMap {
         lowerArmrightLowerArmMotor = new WPI_TalonSRX(6);
         
         lowerArmlowerArmMotors = new SpeedControllerGroup(lowerArmleftLowerArmMotor, lowerArmrightLowerArmMotor  );
-        //LiveWindow.addActuator("LowerArm", "lowerArmMotors", lowerArmlowerArmMotors);
+        LiveWindow.addActuator("LowerArm", "lowerArmMotors", lowerArmlowerArmMotors);
         
         endArmendArmLeftWheel = new WPI_TalonSRX(7);
         
@@ -100,7 +100,7 @@ public class RobotMap {
         endArmendArmRightWheel = new WPI_TalonSRX(8);
         
         endArmendArmMotors = new SpeedControllerGroup(endArmendArmLeftWheel, endArmendArmRightWheel  );
-        //LiveWindow.addActuator("EndArm", "endArmMotors", endArmendArmMotors);
+        LiveWindow.addActuator("EndArm", "endArmMotors", endArmendArmMotors);
         
         climbArmwinch = new WPI_TalonSRX(9);        
 
@@ -108,8 +108,8 @@ public class RobotMap {
         
         ledControlCANifier = new CANifier(1);
         
-        climbArmDoubleSolenoid1 = new DoubleSolenoid(0, 0, 1);
-        //LiveWindow.addActuator("ClimbArm", "DoubleSolenoid1", climbArmDoubleSolenoid1);
+        climbArmDoubleSolenoid1 = new DoubleSolenoid(1, 0, 1);
+        LiveWindow.addActuator("ClimbArm", "Double Solenoid 1", climbArmDoubleSolenoid1);
         
         chassisSensorsIMU = new ADIS16448_IMU();
         chassisSensorsIMU.calibrate();
